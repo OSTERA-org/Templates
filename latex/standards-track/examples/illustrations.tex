@@ -1,0 +1,138 @@
+% ------------------------------------------------------------
+% Illustration examples: equations, listings, code, tables, and figures
+% This file is imported by main.tex, do not compile this file
+% OTT  = OSTERA Template Text - Do not change these
+% OTHT = OSTERA Template Help Text - Remove before publication
+% ------------------------------------------------------------
+
+% Equations
+Below are some example equations
+
+\begin{equation}
+    E = mc^2
+\end{equation}
+\eqlabel{Einstein's mass-energy equivalence}
+\begin{equation}
+    a^2 + b^2 = c^2
+\end{equation}
+\eqlabel{Pythagorean Theorem}
+\vspace{24pt}
+
+% Listings
+\listinglabel{Binary Search}
+\begin{lstlisting}[language=pseudocode]
+function binarySearch(arr, target):
+    left = 0
+    right = length(arr) - 1
+    while left <= right:
+        mid = floor((left + right) / 2)
+        if arr[mid] == target:
+            return mid
+        else if arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+\end{lstlisting}
+\vspace{24pt}
+
+% Code
+\codelabel{Sample Title}
+\examplelabel{Some example code}
+\begin{lstlisting}[language=json]
+```json
+{
+  "Some key name": "some value for this key"
+}
+```
+\end{lstlisting}
+\examplelabel{Some other example code}
+\begin{lstlisting}[language=xml]
+```xml
+<some syntax>
+```
+\end{lstlisting}
+
+\codelabel{A Hello World example in Go}
+\begin{lstlisting}[language=go]
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+\end{lstlisting}
+
+
+\codelabel{A simple print example in Go}
+\examplelabel{Go Print Stmt}
+\begin{lstlisting}[language=go]
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("LaTeX is great")
+}
+```
+\end{lstlisting}
+
+\codelabel{A Hello World example in Go}
+\examplelabel{Go Hello World}
+\begin{lstlisting}[language=go]
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+\end{lstlisting}
+
+
+\vspace{24pt}
+
+% Table
+\begin{table}[htbp]
+  \tabletitle{Sample Data Table}
+  \tablesubtitle{This is a Sample of a Data Table Title}
+  \centering
+  \setlength{\arrayrulewidth}{0.5pt}
+  \begin{tabularx}{\textwidth}{|X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+    \hline
+    \hcell{Name} & \hcell{\#1} & \hcell{\#2} & \hcell{\#3} & \hcell{\#4} & \hcell{\#5} \\
+    \arrayrulecolor{DarkBlue}\hline\arrayrulecolor{black}
+    \hline
+    \rcell{Z1} & 5 & 6 & 3 & \cellcolor{Gray}10 & 5 \\
+    \hline
+    \rcell{Z2} & 3 & 8 & 1 & \cellcolor{Gray}9  & 5 \\
+    \hline
+    \rcell{Z3} & \cellcolor{Gray}9 & 2 & 1 & 6 & 9 \\
+    \hline
+    \rcell{W1} & 2 & 5 & 8 & 1 & 8 \\
+    \hline
+    \rcell{W2} & 9 & 4 & \cellcolor{Gray}10 & 6 & \cellcolor{Gray}1 \\
+    \hline
+    \rcell{W3} & 1 & 8 & 7 & 4 & 7 \\
+    \hline
+  \end{tabularx}
+  \tablecaption{This table contains information about z(1..3) and w(1..3).}
+  \label{tab:sample}
+\end{table}
+\vspace{24pt}
+
+% Figure
+\begin{figure}[htbp]
+    \figuretitle{Sample Figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/ostera-logo.png}
+    \figurecaption{This is a sample of a figure caption.}
+    \label{fig:placeholder}
+\end{figure}
+\vspace{24pt}
